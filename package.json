@@ -1,0 +1,32 @@
+{
+  "name": "es6-virtual-dom",
+  "description": "A virtual DOM re-Implemented with ES6",
+  "version": "0.0.1",
+  "author": "kazuya kawaguchi",
+  "bugs": {
+    "url": "https://github.com/kazupon/es6-virtual-dom/issues"
+  },
+  "devDependencies": {
+    "6to5": "^2.12.4",
+    "espower-6to5": "^1.1.0",
+    "mocha": "^2.1.0",
+    "power-assert": "^0.10.1"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/kazupon/es6-virtual-dom",
+  "keywords": [
+    "virtual",
+    "dom"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazupon/es6-virtual-dom.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
