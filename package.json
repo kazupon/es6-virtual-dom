@@ -9,6 +9,7 @@
   "devDependencies": {
     "6to5": "^2.12.4",
     "espower-6to5": "^1.1.0",
+    "jshint": "^2.5.11",
     "mocha": "^2.1.0",
     "power-assert": "^0.10.1"
   },
@@ -21,12 +22,14 @@
     "dom"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kazupon/es6-virtual-dom.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "jshint --config .jshintrc src/*.js --exclude-path .jshintignore test/*.js",
+    "build": "npm run lint && 6to5 src --out-dir lib  --source-maps-inline",
+    "test": "npm run build && mocha --compilers js:espower-6to5/guess test/*.js"
   }
 }
