@@ -28,8 +28,11 @@
     "url": "https://github.com/kazupon/es6-virtual-dom.git"
   },
   "scripts": {
-    "lint": "jshint --config .jshintrc src/*.js --exclude-path .jshintignore test/*.js",
+    "lint": "jshint --config .jshintrc src/**/*.js --exclude-path .jshintignore test/**/*.js",
     "build": "npm run lint && 6to5 src --out-dir lib  --source-maps-inline",
-    "test": "npm run build && mocha --compilers js:espower-6to5/guess test/*.js"
+    "test": "npm run build && mocha --compilers js:espower-6to5/guess test/**/*.js"
+  },
+  "dependencies": {
+    "component-type": "^1.1.0"
   }
 }
