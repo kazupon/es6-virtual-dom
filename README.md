@@ -2,6 +2,8 @@
 
 A virtual DOM re-Implemented with ES6.
 
+> This project is experimental
+
 WIP ...
 
 
