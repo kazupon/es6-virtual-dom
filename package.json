@@ -7,11 +7,11 @@
     "url": "https://github.com/kazupon/es6-virtual-dom/issues"
   },
   "devDependencies": {
-    "6to5": "^2.12.4",
-    "espower-6to5": "^1.1.0",
+    "babel": "^4.6.6",
+    "espower-babel": "^1.3.0",
     "jshint": "^2.5.11",
     "mocha": "^2.1.0",
-    "power-assert": "^0.10.1"
+    "power-assert": "^0.10.2"
   },
   "files": [
     "lib"
@@ -29,8 +29,8 @@
   },
   "scripts": {
     "lint": "jshint --config .jshintrc src/**/*.js --exclude-path .jshintignore test/**/*.js",
-    "build": "npm run lint && 6to5 src --out-dir lib  --source-maps-inline",
-    "test": "npm run build && mocha --compilers js:espower-6to5/guess test/**/*.js"
+    "build": "npm run lint && babel src --out-dir lib  --source-maps-inline",
+    "test": "npm run build && mocha --compilers js:espower-babel/guess test/**/*.js"
   },
   "dependencies": {
     "component-type": "^1.1.0"
